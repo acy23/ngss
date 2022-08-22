@@ -11,39 +11,48 @@ partial class Ngss
         public string _itemCategory;
 
         
-        public Calculate(User user)
+        public Calculate(User user , Items item)
         {
             _card = user.Card;
             _isAffiliate = user.IsAffiliate;
             _yearRecorded = user.YearRecorded;
+
+            _itemCategory = item.Category;
         }
 
         public double getDiscount(double price)
         {
             double discount = 0;
             double md , fp;
-
-            if (_card == "gold")
-            {
-                discount = discount + 30;
-            }
-            else if (_card == "silver")
-            {
-                discount = discount + 20;
+            if (_itemCategory != "phone")
+            { 
+                if (_card == "gold")
+                {
+                    discount = discount + 30;
+                }
+                else if (_card == "silver")
+                {
+                    discount = discount + 20;
+                }
+                else
+                {
+                    if (_isAffiliate)
+                        discount += 10;
+                    else
+                    {
+                        if (_yearRecorded >= 2)
+                            discount += 5;
+                    }
+                }
+                md = price * (discount / 100);
+                fp = price - md;
             }
             else
             {
-                if (_isAffiliate)
-                    discount += 10;
-                else
-                {
-                    if (_yearRecorded >= 2)
-                        discount += 5;
-                }
+                md = price * (discount / 100);
+                fp = price - md;
             }
-
-            md = price * (discount / 100);
-            fp = price - md;
+            
 
             int lastdiscount = ((int)price / 200) * 5;
 
