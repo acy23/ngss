@@ -20,7 +20,7 @@ class ngss
         public string _card;
         public bool _isAffiliate;
         public int _yearRecorded;
-        public Calculate (User u)
+        public Calculate(User u)
         {
             _card = u.Card;
             _isAffiliate = u.IsAffiliate;
@@ -29,29 +29,31 @@ class ngss
 
         public double getDiscount(double price)
         {
-            int total = 0;
+            double discount = 0;
+            double md;
 
             if (_card == "gold")
             {
-                total = total + 30;
+                discount = discount + 30;
             }
             else if (_card == "silver")
             {
-                total = total + 20;
+                discount = discount + 20;
             }
 
             if (_isAffiliate)
-                total += 10;
+                discount += 10;
 
             if (_yearRecorded >= 2)
-                total += 5;
+                discount += 5;
 
-            return price-total;
-            
+            md = price * (discount / 100);
+
+            return price - md;
+
         }
 
-    }
-
+    }    
 
     // Main Method
     static public void Main(String[] args)
@@ -68,7 +70,6 @@ class ngss
         Calculate calculate = new Calculate(u);
         final_price = calculate.getDiscount(100);
         Console.WriteLine(final_price);
-
 
     }
 }
