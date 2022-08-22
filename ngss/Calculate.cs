@@ -1,21 +1,27 @@
-﻿partial class Ngss
+﻿using System.Runtime.InteropServices;
+
+partial class Ngss
 {
     class Calculate : ICalculate
     {
         public string _card;
         public bool _isAffiliate;
         public int _yearRecorded;
-        public Calculate(User u)
+
+        public string _itemCategory;
+
+        
+        public Calculate(User user)
         {
-            _card = u.Card;
-            _isAffiliate = u.IsAffiliate;
-            _yearRecorded = u.YearRecorded;
+            _card = user.Card;
+            _isAffiliate = user.IsAffiliate;
+            _yearRecorded = user.YearRecorded;
         }
 
         public double getDiscount(double price)
         {
             double discount = 0;
-            double md;
+            double md , fp;
 
             if (_card == "gold")
             {
@@ -25,16 +31,23 @@
             {
                 discount = discount + 20;
             }
-
-            if (_isAffiliate)
-                discount += 10;
-
-            if (_yearRecorded >= 2)
-                discount += 5;
+            else
+            {
+                if (_isAffiliate)
+                    discount += 10;
+                else
+                {
+                    if (_yearRecorded >= 2)
+                        discount += 5;
+                }
+            }
 
             md = price * (discount / 100);
+            fp = price - md;
 
-            return price - md;
+            int lastdiscount = ((int)price / 200) * 5;
+
+            return fp - lastdiscount;
 
         }
 
