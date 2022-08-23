@@ -8,16 +8,20 @@ partial class Ngss
     {
         double final_price;
 
-        User user = new User();
-        user.Name = "ahmet";
-        user.Card = "gold";
-        user.IsAffiliate = false;
-        user.YearRecorded = 3;
+        User user = new User
+        {
+            Name = "ahmet",
+            Card = "gold",
+            IsAffiliate = false,
+            YearRecorded = 3
+        };
 
-        Items item = new Items();
-        item.Id = 1;
-        item.Name = "tyre";
-        item.Category = "car";
+        Items item = new Items
+        {
+            Id = 1,
+            Name = "tyre",
+            Category = "car"
+        };
 
 
         Calculate calculate = new Calculate(user , item);
