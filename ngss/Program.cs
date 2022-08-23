@@ -2,7 +2,6 @@
 
 partial class Ngss
 {   
-
     // Main Method
     static public void Main(String[] args)
     {
@@ -23,11 +22,9 @@ partial class Ngss
             Category = "car"
         };
 
-
         Calculate calculate = new Calculate(user , item);
-        final_price = calculate.getDiscount(10000);
+        final_price = calculate.getDiscount(1000);
         Console.WriteLine(final_price);
         
-
     }
 }
