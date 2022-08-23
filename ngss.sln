@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ngss", "ngss\ngss.csproj", "{83695BFB-1C53-493D-81A8-F823DDCA71C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Ngss", "Tests.Ngss\Tests.Ngss.csproj", "{F6E9D30E-84F0-44C9-83F0-8508665E9D7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{83695BFB-1C53-493D-81A8-F823DDCA71C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83695BFB-1C53-493D-81A8-F823DDCA71C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83695BFB-1C53-493D-81A8-F823DDCA71C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E9D30E-84F0-44C9-83F0-8508665E9D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E9D30E-84F0-44C9-83F0-8508665E9D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E9D30E-84F0-44C9-83F0-8508665E9D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E9D30E-84F0-44C9-83F0-8508665E9D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

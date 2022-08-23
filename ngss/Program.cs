@@ -1,6 +1,6 @@
 ﻿using System;
 
-partial class Ngss
+public partial class Ngss
 {   
     // Main Method
     static public void Main(String[] args)
@@ -10,7 +10,7 @@ partial class Ngss
         User user = new User
         {
             Name = "ahmet",
-            Card = "gold",
+            Card = "silver",
             IsAffiliate = false,
             YearRecorded = 3
         };

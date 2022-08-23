@@ -1,8 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 
-partial class Ngss
+public partial class Ngss
 {
-    class Calculate : ICalculate
+    public class Calculate : ICalculate
     {
         public string? _card;
         public bool _isAffiliate;

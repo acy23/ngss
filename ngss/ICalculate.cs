@@ -1,4 +1,4 @@
-﻿partial class Ngss
+﻿public partial class Ngss
 {
     public interface ICalculate 
     {
