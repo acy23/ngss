@@ -21,7 +21,7 @@ partial class Ngss
 
 
         Calculate calculate = new Calculate(user , item);
-        final_price = calculate.getDiscount(100);
+        final_price = calculate.getDiscount(10000);
         Console.WriteLine(final_price);
         
 

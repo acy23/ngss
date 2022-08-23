@@ -4,11 +4,11 @@ partial class Ngss
 {
     class Calculate : ICalculate
     {
-        public string _card;
+        public string? _card;
         public bool _isAffiliate;
         public int _yearRecorded;
 
-        public string _itemCategory;
+        public string? _itemCategory;
 
         
         public Calculate(User user , Items item)
@@ -24,7 +24,7 @@ partial class Ngss
         {
             double discount = 0;
             double md , fp;
-            if (_itemCategory != "phone")
+            if (_itemCategory != "phone" && price >= 0)
             { 
                 if (_card == "gold")
                 {
